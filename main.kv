@@ -20,7 +20,7 @@
 
         DPEAButton:  
             id: auto
-            color: 0.917, 0.796, 0.380, 1
+            color: 168/255, 19/255, 68/255, 1
             text: "Start"
             center_x: root.width * 0.5
             y: root.height * 0.55
@@ -29,12 +29,11 @@
             size_hint: None,None
             size: 300,100
             on_press: root.auto()
-            on_release: root.resetColors()
 
         # Turn on/off gate
         DPEAButton:
             id: gate
-            color: 0.180, 0.188, 0.980, 1
+            color: 168/255, 19/255, 68/255, 1
             text: "Open Gate"
             center_x: root.width * 0.25
             y: root.height * 0.35
@@ -43,11 +42,10 @@
             size_hint: None,None
             size: 300,100
             on_press: root.toggleGate()
-            on_release: root.resetColors()
 
         DPEAButton:
             id: ramp
-            color: 0.180, 0.188, 0.980, 1
+            color: 168/255, 19/255, 68/255, 1
             text: "Ramp to Top"
             center_x: root.width * 0.5
             y: root.height * 0.35
@@ -55,12 +53,11 @@
             background_normal: ''
             size_hint: None,None
             size: 300,100
-            on_press: root.toggleRamp()
-            on_release: root.resetColors()
+            on_press: root.threadtoggleRamp()
 
         DPEAButton:
             id: staircase
-            color: 0.180, 0.188, 0.980, 1
+            color: 168/255, 19/255, 68/255, 1
             text: "Staircase On"
             center_x: root.width * 0.75
             y: root.height * 0.35
@@ -69,7 +66,6 @@
             size_hint: None,None
             size: 300,100
             on_press: root.toggleStaircase()
-            on_release: root.resetColors()
 
 	##################
 	##### SLIDERS ####
@@ -78,8 +74,8 @@
         Slider:
             id: rampSpeed
             orientation: 'horizontal'
-            min: 10
-            max: 200
+            min: 1
+            max: 10
             value: root.rampSpeed
             step: 1
             center_x: root.width * 0.6
@@ -90,8 +86,8 @@
         Slider:
             id: staircaseSpeed
             orientation: 'horizontal'
-            min: 10
-            max: 50
+            min: 1
+            max: 10
             value: root.staircaseSpeed
             step: 1
             center_x: root.width * 0.6
